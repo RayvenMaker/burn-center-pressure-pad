@@ -11411,28 +11411,20 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="-205.74" y="515.62" size="1.778" layer="255" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="I2C$SCL" class="0">
+<net name="N$32" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="SCL"/>
 <pinref part="R11" gate="G$1" pin="2"/>
-<wire x1="25.4" y1="96.52" x2="25.4" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="91.44" x2="25.4" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="91.44" x2="17.78" y2="91.44" width="0.1524" layer="91"/>
-<junction x="25.4" y="91.44"/>
-<label x="17.78" y="91.44" size="1.778" layer="255" rot="R180" xref="yes"/>
+<wire x1="25.4" y1="96.52" x2="25.4" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="I2C$SDA" class="0">
+<net name="N$33" class="0">
 <segment>
 <pinref part="R10" gate="G$1" pin="2"/>
-<wire x1="30.48" y1="78.74" x2="30.48" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="78.74" x2="30.48" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="SDA"/>
-<wire x1="30.48" y1="86.36" x2="30.48" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="93.98" x2="27.94" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="93.98" x2="27.94" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="30.48" y1="86.36" x2="17.78" y2="86.36" width="0.1524" layer="91"/>
-<junction x="30.48" y="86.36"/>
-<label x="17.78" y="86.36" size="1.778" layer="255" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
