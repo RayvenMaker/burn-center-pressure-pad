@@ -1,5 +1,5 @@
 /**
- * Compile with: arduino-cli compile --fqbn arduino:avr:micro
+ * Compile with: arduino-cli compile --fqbn arduino:avr:<board>
  * Run with: arduino-cli ...
  */
 
@@ -71,6 +71,7 @@ void readData() {
         for (int j = 0; j < 16; j++) {
             setPin(i);
             values[i][j] = analogRead(MUX_IN);
+			delay(10);
         }
 
         mcp0.digitalWrite(i, LOW);
@@ -87,6 +88,8 @@ void setup() {
     //mcps[6].begin(0x26);
     //mcps[7].begin(0x27);
 
+	Serial.begin(9600);
+
     DDRD = DDRD | B00111100;
 
     mcp0.begin();
@@ -98,6 +101,18 @@ void setup() {
 
 void loop() {
     readData();
-    delay(10);
+
+	for (int i = 0; i < 16; i++) {
+		Serial.print("{");
+
+		for (int j = 0; j < 16; j++) {
+			Serial.print(values[i][j], DEC);
+			Serial.print(", ");
+		}
+
+		Serial.println("}");
+	}
+
+    delay(1000);
 }
 
