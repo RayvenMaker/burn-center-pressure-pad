@@ -71,7 +71,7 @@ void readData() {
         for (int j = 0; j < 16; j++) {
             setPin(i);
             values[i][j] = analogRead(MUX_IN);
-			delay(10);
+		delayMicroseconds(10000);
         }
 
         mcp0.digitalWrite(i, LOW);
@@ -88,7 +88,7 @@ void setup() {
     //mcps[6].begin(0x26);
     //mcps[7].begin(0x27);
 
-	Serial.begin(9600);
+	Serial.begin(2000000);
 
     DDRD = DDRD | B00111100;
 
@@ -100,6 +100,7 @@ void setup() {
 }
 
 void loop() {
+  Serial.println("-----------------------------------------------------------------------------------------------------------");
     readData();
 
 	for (int i = 0; i < 16; i++) {
@@ -113,6 +114,5 @@ void loop() {
 		Serial.println("}");
 	}
 
-    delay(1000);
+    delay(3000);
 }
-
