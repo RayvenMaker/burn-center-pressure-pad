@@ -32,11 +32,15 @@ void setup() {
 }
 
 void loop() {
+  unsigned long t = micros();
 	for (int i = 0; i < 16; i++) {
 		setPin(i);
 		values[i] = analogRead(MUX_IN);
-		delayMicroseconds(10000);
+		//delayMicroseconds(10);
 	}
+ 
+Serial.print("Time: ");
+Serial.print(micros()-t);
 
 	Serial.print("{");
 	for (int i = 0; i < 16; i++) {
@@ -47,4 +51,3 @@ void loop() {
 
 	delay(1000);
 }
-
