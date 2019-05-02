@@ -5,8 +5,11 @@
 
 #include <Wire.h>
 #include "Adafruit_MCP23017.h"
+#include "Adafruit_MCP3008.h"
 
 #define MUX_IN A0
+
+Adafruit_MCP3008 adc;
 
 // digital out switch pins: 2-5
 byte controlPins[] = {
@@ -28,7 +31,7 @@ byte controlPins[] = {
 	B00111100,
 };
 
-uint8_t values[16][16] = {
+uint16_t values[16][16] = {
 	{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 	{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 	{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -70,8 +73,9 @@ void readData() {
 		// Cycle through MUX pins
 		for (int j = 0; j < 16; j++) {
 			setPin(i);
-			values[i][j] = analogRead(MUX_IN);
-			delayMicroseconds(10000);
+			//values[i][j] = analogRead(MUX_IN);
+			values[i][j] = adc.readADC(0);
+			delayMicroseconds(10);
 		}
 
 		mcp0.digitalWrite(i, LOW);
@@ -90,6 +94,8 @@ void setup() {
 
 	Serial.begin(2000000);
 
+	adc.begin();
+
 	DDRD = DDRD | B00111100;
 
 	mcp0.begin();
@@ -100,7 +106,7 @@ void setup() {
 }
 
 void loop() {
-	Serial.println("-----------------------------------------------------------------------------------------------------------");
+	Serial.println("----------------------------------------------------------------------------------------------------");
 	readData();
 
 	for (int i = 0; i < 16; i++) {
