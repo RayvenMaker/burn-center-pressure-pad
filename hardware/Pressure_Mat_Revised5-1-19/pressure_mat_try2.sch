@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.1">
+<eagle version="9.4.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2631,7 +2631,7 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <part name="GND6" library="SparkFun" deviceset="GND" device=""/>
 <part name="SUPPLY3" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="VCC" device="" value="3.3V0"/>
 <part name="ANALOG_MUX3" library="SparkFun" deviceset="MUX-74HC4067" device="SMD" value="MUX-74HC4067"/>
-<part name="R5" library="SparkFun" deviceset="RESISTOR" device="0603" value="10K"/>
+<part name="R5" library="SparkFun" deviceset="RESISTOR" device="0603" value="0"/>
 <part name="GND7" library="SparkFun" deviceset="GND" device=""/>
 <part name="3.3V0" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="VCC" device="" value="3.3V0"/>
 <part name="DIGITAL_MUX1" library="SamacSys_Parts" deviceset="MCP23017T-E_ML" device=""/>
@@ -2739,7 +2739,7 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <part name="C8" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="0.1UF" device="-0402-16V-10%" package3d_urn="urn:adsk.eagle:package:37413/1" value="0.1uF"/>
 <part name="C9" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="0.1UF" device="-0402-16V-10%" package3d_urn="urn:adsk.eagle:package:37413/1" value="0.1uF"/>
 <part name="C10" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="0.1UF" device="-0402-16V-10%" package3d_urn="urn:adsk.eagle:package:37413/1" value="0.1uF"/>
-<part name="R68" library="SparkFun" deviceset="RESISTOR" device="0603" value="100k"/>
+<part name="R68" library="SparkFun" deviceset="RESISTOR" device="0603" value="100"/>
 </parts>
 <sheets>
 <sheet>
@@ -5160,8 +5160,8 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 </segment>
 <segment>
 <pinref part="PAD_BUS" gate="G$1" pin="P$9"/>
-<wire x1="167.64" y1="162.56" x2="172.72" y2="162.56" width="0.1524" layer="91"/>
-<label x="172.72" y="162.56" size="1.778" layer="95"/>
+<wire x1="167.64" y1="162.56" x2="170.18" y2="162.56" width="0.1524" layer="91"/>
+<label x="170.18" y="162.56" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CS" class="0">
@@ -5177,8 +5177,8 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 </segment>
 <segment>
 <pinref part="PAD_BUS" gate="G$1" pin="P$10"/>
-<wire x1="167.64" y1="165.1" x2="172.72" y2="165.1" width="0.1524" layer="91"/>
-<label x="172.72" y="165.1" size="1.778" layer="95"/>
+<wire x1="167.64" y1="165.1" x2="170.18" y2="165.1" width="0.1524" layer="91"/>
+<label x="170.18" y="165.1" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="A_MUX3_IN" class="0">
