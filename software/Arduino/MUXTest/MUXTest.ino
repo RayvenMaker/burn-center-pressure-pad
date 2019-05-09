@@ -1,3 +1,7 @@
+/**
+ * Copyright (C) 2019 Jude Brauer. All rights reserved.
+ */
+
 #define MUX_IN A0
 
 // digital out switch pins: 2-5

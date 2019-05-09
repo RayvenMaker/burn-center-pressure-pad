@@ -1,3 +1,7 @@
+/**
+ * Copyright (C) 2019 Jude Brauer. All rights reserved.
+ */
+
 #include <Wire.h>
 #include "Adafruit_MCP23017.h"
 
