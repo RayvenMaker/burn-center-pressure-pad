@@ -31,7 +31,7 @@ byte controlPins[] = {
 	B00111100,
 };
 
-uint16_t values[64][64];
+uint8_t values[64][64];
 
 Adafruit_MCP23017 mcp0;
 Adafruit_MCP23017 mcp1;
@@ -47,20 +47,22 @@ void setPin(uint8_t outputPin) {
 void readData() {
 	// Cycle through MCP pins
 	for (int i = 0; i < 64; i++) {
-		// TODO: cycle through pins on the different MCP chips
-		mcp0.digitalWrite(i, HIGH);
+		// Cycle through each pin on the 4 MCP23017 I2C port expanders
+		mcps[i / 16].digitalWrite((i+16) % 16, HIGH);
 
 		// Cycle through MUX pins
 		for (int j = 0; j < 16; j++) {
 			setPin(i);
-			values[i][j] = adc.readADC(0);
-			values[i][j+16] = adc.readADC(1);
-			values[i][j+32] = adc.readADC(2);
-			values[i][j+48] = adc.readADC(3);
+			
+			values[i][j] = (adc.readADC(0) / 1023) * 255;
+			values[i][j+16] = (adc.readADC(1) / 1023) * 255;
+			values[i][j+32] = (adc.readADC(2) / 1023) * 255;
+			values[i][j+48] = (adc.readADC(3) / 1023) * 255;
+
 			delayMicroseconds(10);
 		}
 
-		mcp0.digitalWrite(i, LOW);
+		mcps[i / 16].digitalWrite((i+16) % 16, LOW);
 	}
 }
 
@@ -76,10 +78,10 @@ void setup() {
 
 	DDRD = DDRD | B00111100;
 
-	mcp0.begin();
-
-	for (int i = 0; i < 16; i++) {
-		mcp0.pinMode(i, OUTPUT);
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 16; j++) {
+			mcps[i].pinMode(j, OUTPUT);
+		}
 	}
 }
 
