@@ -132,7 +132,7 @@ void setup() {
     expanders[3].begin(0x23);
 
     // Enable the ADC
-    adc.begin();
+    adc.begin(6);
 
     // Setup the 4 multiplexer switch pins
     for (int i = 2; i <= 5; i++) {

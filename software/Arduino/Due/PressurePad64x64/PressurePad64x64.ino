@@ -103,7 +103,7 @@ void sendFrame() {
 }
 
 void setup() {
-    Serial.begin(2000000);
+    Serial.begin(115200);
 
     // Enable the MCP23017s
     expanders[0].begin(0x20);
@@ -112,7 +112,7 @@ void setup() {
     expanders[3].begin(0x23);
 
     // Enable the ADC
-    adc.begin();
+    adc.begin(6);
 
     // Setup the 4 multiplexer switch pins
     for (int i = 2; i <= 5; i++) {
