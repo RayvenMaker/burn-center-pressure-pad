@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2019-05-03T20:00:21Z",
+        "GenerationSoftware": {
+            "Application": "EAGLE",
+            "Vendor": "Autodesk",
+            "Version": "9.4.0"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.57,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "pressure_mat_try2"
+        },
+        "Owner": "Thebonsaidude Thebonsaidude <thebonsaidude@gmail.com>",
+        "Size": {
+            "X": 290,
+            "Y": 290
+        }
+    }
+}

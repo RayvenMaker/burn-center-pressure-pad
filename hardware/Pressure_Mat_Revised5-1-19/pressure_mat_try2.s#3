@@ -2744,6 +2744,8 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <part name="P+9" library="SparkFun" deviceset="VCC" device="" value="3.3V0"/>
 <part name="R69" library="SparkFun" deviceset="RESISTOR" device="0603" value="10K"/>
 <part name="R70" library="SparkFun" deviceset="RESISTOR" device="0603" value="10K"/>
+<part name="P+10" library="SparkFun" deviceset="VCC" device="" value="3.3V0"/>
+<part name="R71" library="SparkFun" deviceset="RESISTOR" device="0603" value="10K"/>
 </parts>
 <sheets>
 <sheet>
@@ -3208,6 +3210,13 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <attribute name="NAME" x="183.9214" y="163.83" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="188.722" y="163.83" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="P+10" gate="1" x="294.64" y="180.34" smashed="yes">
+<attribute name="VALUE" x="293.624" y="183.896" size="1.778" layer="96"/>
+</instance>
+<instance part="R71" gate="G$1" x="294.64" y="172.72" smashed="yes" rot="R90">
+<attribute name="NAME" x="293.1414" y="168.91" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="297.942" y="168.91" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -3253,6 +3262,11 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <pinref part="P+9" gate="1" pin="VCC"/>
 <pinref part="R70" gate="G$1" pin="2"/>
 <wire x1="185.42" y1="175.26" x2="185.42" y2="172.72" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="P+10" gate="1" pin="VCC"/>
+<pinref part="R71" gate="G$1" pin="2"/>
+<wire x1="294.64" y1="180.34" x2="294.64" y2="177.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="EN0" class="0">
@@ -5405,6 +5419,12 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <pinref part="C10" gate="G$1" pin="2"/>
 <wire x1="241.3" y1="139.7" x2="248.92" y2="139.7" width="0.1524" layer="91"/>
 <junction x="241.3" y="139.7"/>
+</segment>
+</net>
+<net name="MISO1" class="0">
+<segment>
+<pinref part="R71" gate="G$1" pin="1"/>
+<wire x1="294.64" y1="162.56" x2="294.64" y2="167.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
