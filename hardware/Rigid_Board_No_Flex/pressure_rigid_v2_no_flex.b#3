@@ -162,9 +162,6 @@
 <wire x1="109.454" y1="-15.494" x2="109.454" y2="72.568" width="0" layer="20"/>
 <wire x1="109.454" y1="72.568" x2="-12.7" y2="72.568" width="0" layer="20"/>
 <wire x1="-12.7" y1="72.568" x2="-12.7" y2="-15.494" width="0" layer="20"/>
-<text x="70.612" y="2.54" size="1.016" layer="21" rot="R90">1</text>
-<text x="70.612" y="7.62" size="1.016" layer="21" rot="R90">2</text>
-<text x="70.612" y="12.7" size="1.016" layer="21" rot="R90">3</text>
 </plain>
 <libraries>
 <library name="MCP3008 not a duplicate">
