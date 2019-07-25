@@ -3558,7 +3558,8 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <classes>
 <class number="0" name="default" width="0" drill="0">
 </class>
-<class number="1" name="supply" width="0" drill="0">
+<class number="1" name="supply" width="0.0762" drill="0.0762">
+<clearance class="1" value="0.0762"/>
 </class>
 </classes>
 <parts>
@@ -3893,7 +3894,7 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <busses>
 </busses>
 <nets>
-<net name="VCC" class="0">
+<net name="VCC" class="1">
 <segment>
 <pinref part="DIGITAL_MUX2" gate="G$1" pin="A0"/>
 <wire x1="256.54" y1="0" x2="256.54" y2="-7.62" width="0.1524" layer="91"/>
@@ -4068,7 +4069,7 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <pinref part="M1" gate="G$1" pin="D5"/>
 </segment>
 </net>
-<net name="GND" class="0">
+<net name="GND" class="1">
 <segment>
 <pinref part="GND4" gate="1" pin="GND"/>
 <pinref part="ANALOG_MUX0" gate="G$1" pin="GND"/>
@@ -5542,7 +5543,7 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <junction x="104.14" y="-27.94"/>
 </segment>
 </net>
-<net name="3.3V0" class="0">
+<net name="3.3V0" class="1">
 <segment>
 <pinref part="ANALOG_MUX3" gate="G$1" pin="VCC"/>
 <wire x1="88.9" y1="193.04" x2="134.62" y2="193.04" width="0.1524" layer="91"/>
@@ -5713,7 +5714,7 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <pinref part="J9" gate="G$1" pin="6"/>
 </segment>
 </net>
-<net name="N$66" class="0">
+<net name="N$66" class="1">
 <segment>
 <wire x1="383.54" y1="124.46" x2="383.54" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="M1" gate="G$1" pin="GND@1"/>
@@ -5721,7 +5722,7 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <wire x1="383.54" y1="99.06" x2="378.46" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$67" class="0">
+<net name="N$67" class="1">
 <segment>
 <pinref part="M1" gate="G$1" pin="3V"/>
 <wire x1="375.92" y1="124.46" x2="375.92" y2="116.84" width="0.1524" layer="91"/>

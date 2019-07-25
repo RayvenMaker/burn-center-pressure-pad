@@ -2676,6 +2676,8 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <classes>
 <class number="0" name="default" width="0" drill="0">
 </class>
+<class number="1" name="supply" width="0" drill="0">
+</class>
 </classes>
 <parts>
 <part name="ANALOG_MUX0" library="SparkFun" deviceset="MUX-74HC4067" device="SMD" value="MUX-74HC4067"/>
